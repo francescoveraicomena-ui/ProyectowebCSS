@@ -112,11 +112,18 @@ header {
 
 .container {
     width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
     margin: auto;
     z-index: 20;
     position: relative;
 }
-.centrado{
+.row{
+
+    display: flex;
+    flex-wrap: wrap;
+}
+.centrado {
     display: block;
     margin: auto;
 }
@@ -147,6 +154,30 @@ header {
     font-weight: 500;
     font-family: 'poppins';
 
+}
+
+@media screen and (max-width: 860px) {
+    .mainbanner {
+        padding: 12em 6em;
+    }
+
+    .mainbanner__boton {
+        display: block;
+        margin-bottom: 1em;
+    }
+
+    .mainbanner__data {
+        text-align: center;
+        margin: auto;
+    }
+
+    .mainbanner__titulo {
+        font-size: 2em;
+    }
+
+    .mainbanner__parrafo {
+        font-size: 1em;
+    }
 }
 
 /* FIN DE BANER */
