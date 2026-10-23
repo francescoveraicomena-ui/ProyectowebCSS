@@ -1,0 +1,266 @@
+:root {
+    --colorprimario: #da0909;
+    --colorsecundario: #1d35ba;
+    --colorterciario: #00df29;
+    --colortitulos: #101500;
+    --colorparrafos: #9c14be;
+    --colorsombras: #f4fcf5;
+    --colorbordes: #730ae3;
+}
+
+/*SELECTOR UNIVERSAL*/
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: rgb(19, 92, 209);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 0 3px var(--colorsombras);
+}
+
+.menu {
+    width: 85%;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu__img-logo {
+    height: 60px;
+}
+
+.menu__btn-menu {
+    display: none;
+}
+
+.menu__enlaces a {
+    font-family: 'Poppins';
+    padding: .7em;
+    text-align: center;
+    font-size: 1em;
+    text-decoration: none;
+    color: var(--colortitulos);
+    font-weight: 1000;
+}
+
+@media screen and (max-width: 1023px) {
+    .menu {
+        flex-direction: column;
+    }
+
+    .menu__logo {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+        padding: 1em;
+    }
+
+    .menu__btn-menu {
+        display: block;
+        color: var(--colorprimario);
+        flex-direction: column;
+    }
+
+    .menu__enlaces {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+
+/* INICIO DE BANER */
+.mainbanner {
+    position: relative;
+    padding: 24em 14em;
+    /* Color secundario */
+    background: linear-gradient(to right, #1e00ff, #1e00ff);
+    top: 61px;
+}
+
+.mainbanner::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    /* background-color: var(--colorsecundario); */
+    mix-blend-mode: color;
+    opacity: .2;
+}
+
+.mainbanner__img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: .4;
+}
+
+.container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin: auto;
+    z-index: 20;
+    position: relative;
+}
+
+.row {
+
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.centrado {
+    display: block;
+    margin: auto;
+}
+
+.mainbanner__data {
+    text-align: center;
+}
+
+.mainbanner__titulo {
+    color: #fff;
+    font-family: 'poppins';
+    font-weight: 700;
+    font-size: 2.5em;
+}
+
+.mainbanner__parrafo {
+    color: #fff;
+    font-family: 'poppins';
+    font-size: 1.2em;
+}
+
+.mainbanner__boton {
+    background-color: var(--colorprimario);
+    color: #fff;
+    padding: 1em 1.2em;
+    border-radius: .8em;
+    text-decoration: none;
+    font-weight: 500;
+    font-family: 'poppins';
+    background-color: white;
+
+}
+
+.titulo__centrar {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    font-family: "poppins";
+    color: black;
+    margin-top: 3px;
+    font-size: 3em;
+}
+
+@media screen and (max-width: 860px) {
+    .mainbanner {
+        padding: 12em 6em;
+    }
+
+    .mainbanner__boton {
+        display: block;
+        margin-bottom: 1em;
+    }
+
+    .mainbanner__data {
+        text-align: center;
+        margin: auto;
+    }
+
+    .mainbanner__titulo {
+        font-size: 2em;
+    }
+
+    .mainbanner__parrafo {
+        font-size: 1em;
+    }
+}
+
+/* FIN DE BANER */
+
+/* INICIO DE CARD GRID */
+.cards__grid {
+    display: grid;
+    gap: 1em;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+}
+
+.card {
+    border-radius: 1em;
+    border: 0.5px solid var(--colorsombras);
+    box-shadow: 0 4px 6px var(--colorsombras);
+}
+
+.card__img img {
+    max-width: 100%;
+    border-radius: 1em 1em 0 0;
+}
+
+.card__content {
+    padding: 1em;
+}
+
+.card__content a {
+    text-decoration: none;
+}
+
+.card__title {
+    font-family: "poppins";
+    font-weight: 700;
+    font-size: 1em;
+    text-align: center;
+    color: var(--colortitulos);
+    text-transform: uppercase;
+}
+
+.card__info {
+    background-color: var(--colorprimario);
+    color: white;
+    font-size: 1em;
+    padding: 1em;
+    margin-top: 1.5em;
+    display: block;
+    border-radius: 1.5em;
+    text-align: center;
+    font-weight: 600;
+    font-family: "poppins";
+    transition: background-color .5s ease-in-out;
+    background-color: #fff;
+    border: 1px solid red;
+    color: red;
+
+}
+
+.card__info:hover {
+    background-color: var(--colorsecundario);
+    color: #ffff;
+}
+
+.IconoWS{
+    position: fixed;
+    left: 1em;
+    bottom: 1em;
+    font-size: 3em;
+    background-color: #25D366;
+    color: #fff;
+    border-radius: 50%;
+    padding: .3em;
+    box-shadow: 0px 0px 6px #000;
+}
+/* FIN DE CARD GRID */
