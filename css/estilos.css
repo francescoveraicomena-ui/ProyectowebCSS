@@ -3,8 +3,8 @@
     --colorsecundario: #1d35ba;
     --colorterciario: #00df29;
     --colortitulos: #101500;
-    --colorparrafos: #9c14be;
-    --colorsombras: #f4fcf5;
+    --colorparrafos: #4388ba;
+    --colorsombras: #008cff;
     --colorbordes: #730ae3;
 }
 
@@ -264,3 +264,30 @@ header {
     box-shadow: 0px 0px 6px #000;
 }
 /* FIN DE CARD GRID */
+
+/* INICIO DE FOOTER */
+footer{
+    background-color: var(--colorsombras);
+    color: #fff;
+    padding: 1em 0;
+}
+.iconos-pie{
+    font-size: 3em;
+}
+.iconos-pie:hover{
+    color:var(--colorprimario)
+}
+.pie, .info{
+    font-family: "poppins";
+    font-weight: 400;
+    font-size: 1em;
+}
+.derechos{
+    background-color: var(--colorparrafos);
+    color: #fff;
+    font-family: "poppins";
+    padding: 0.5em 0;
+    margin: 40px auto; 
+    box-sizing: border-box;
+}
+/* FIN DE FOOTER */

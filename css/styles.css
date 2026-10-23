@@ -230,3 +230,28 @@ header {
     color: #ffff;
 }
 /* FIN DE CARD GRID */
+
+/* INICIO DE FOOTER */
+footer{
+    background-color: var(--colorsombras);
+    color: #fff;
+    padding: 1em 0;
+}
+.iconos-pie{
+    font-size: 3em;
+}
+.iconos-pie:hover{
+    color:var(--colorprimario)
+}
+.pie, .info{
+    font-family: "poppins";
+    font-weight: 400;
+    font-size: 1em;
+}
+.derechos{
+    background-color: var(--colorparrafos);
+    color: #fff;
+    font-family: "poppins";
+    padding: 0.5 em 0;
+}
+/* FIN DE FOOTER */
