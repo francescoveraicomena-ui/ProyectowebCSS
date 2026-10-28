@@ -1,0 +1,254 @@
+:root {
+    --colorprimario: #EC111A;
+    --colorsecundario: #082BA5;
+    --colorterciario: #007BDF;
+    --colortitulos: #282D31;
+    --colorparrafos: #53575A;
+    --colorsombras: #282D31;
+    --colorvar: #fff;
+    --colorBordes: #DFE0E0;
+}
+
+/* =========================================
+   Reseteo base y fuentes
+========================================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #e9ecef;
+    /* Fondo de la página para que resalte la tarjeta */
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* =========================================
+   Contenedor Principal de la Tarjeta
+========================================= */
+.contact-container {
+    display: flex;
+    width: 100%;
+    max-width: 900px;
+    background-color: #fafafa;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    /* Mantiene los bordes redondeados limpios */
+    position: relative;
+}
+
+/* =========================================
+   Columna Izquierda: Información
+========================================= */
+.contact-info {
+    width: 45%;
+    padding: 50px 40px;
+    position: relative;
+    overflow: hidden;
+    background-color: #fbfbfb;
+}
+
+.info-title {
+    color: var(--colorprimario);
+    font-size: 22px;
+    margin-bottom: 40px;
+}
+
+.info-list {
+    list-style: none;
+    margin-bottom: 50px;
+}
+
+.info-list li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 25px;
+    color: var(--colorparrafos);
+    font-size: 15px;
+}
+
+.info-list i {
+    color: var(--colorprimario);
+    font-size: 24px;
+    margin-right: 20px;
+    width: 25px;
+    text-align: center;
+}
+
+.social-section p {
+    color: var(--colorparrafos);
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+
+.social-icons {
+    display: flex;
+    gap: 10px;
+}
+
+.social-icons a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 35px;
+    height: 35px;
+    background-color: var(--colorprimario);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.social-icons a i {
+    color: #fff !important;
+}
+
+.social-icons a:hover {
+    background-color: var(--colorsecundario);
+    /* Cambiado a secundario para dar efecto visual */
+    transform: translateY(-2px);
+}
+
+/* Círculo decorativo inferior izquierdo */
+.circle-decoration {
+    position: absolute;
+    bottom: -40px;
+    left: 40%;
+    width: 120px;
+    height: 120px;
+    border: 15px solid #d4f1eb;
+    border-radius: 50%;
+}
+
+/* =========================================
+   Columna Derecha: Formulario
+========================================= */
+.contact-form {
+    width: 55%;
+    padding: 50px 40px;
+    background-color: var(--colorprimario);
+    position: relative;
+    overflow: hidden;
+    color: #fff;
+}
+
+/* Decoraciones de fondo circulares */
+.contact-form::before,
+.contact-form::after {
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.05);
+}
+
+.contact-form::before {
+    width: 200px;
+    height: 200px;
+    top: -50px;
+    right: -50px;
+}
+
+.contact-form::after {
+    width: 100px;
+    height: 100px;
+    bottom: 20px;
+    left: -20px;
+}
+
+.form-title {
+    font-size: 22px;
+    margin-bottom: 30px;
+    position: relative;
+    z-index: 1;
+}
+
+form {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Estilo de los campos usando Fieldset para romper la línea del borde */
+.input-group {
+    border: 1px solid #fff;
+    border-radius: 25px;
+    padding: 0 20px 5px 20px;
+    margin-bottom: 20px;
+}
+
+.input-group legend {
+    font-size: 14px;
+    padding: 0 10px;
+    margin-left: 10px;
+    color: #fff;
+}
+
+.input-group input,
+.input-group textarea {
+    width: 100%;
+    border: none;
+    background: transparent;
+    outline: none;
+    color: #fff;
+    font-size: 15px;
+    font-family: inherit;
+}
+
+/* Ajuste específico para el área del mensaje */
+.textarea-group {
+    border-radius: 20px;
+    padding-bottom: 10px;
+}
+
+.textarea-group textarea {
+    resize: none;
+    height: 90px;
+}
+
+/* Botón Enviar */
+.btn-send {
+    background-color: #fff;
+    color: var(--colorprimario);
+    border: none;
+    border-radius: 25px;
+    padding: 10px 35px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    align-self: flex-start;
+    /* Alinea a la izquierda */
+    margin-top: 5px;
+    transition: all 0.3s ease;
+}
+
+.btn-send:hover {
+    background-color: #f1f1f1;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* =========================================
+   Diseño Responsivo (Móviles y Tablets)
+========================================= */
+@media (max-width: 768px) {
+    .contact-container {
+        flex-direction: column;
+    }
+
+    .contact-info,
+    .contact-form {
+        width: 100%;
+    }
+
+    .circle-decoration {
+        display: none;
+        /* Ocultar decoración en móvil para ahorrar espacio */
+    }
+}
