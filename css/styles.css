@@ -96,7 +96,6 @@ header {
     position: absolute;
     top: 0;
     left: 0;
-    /* background-color: var(--colorsecundario); */
     mix-blend-mode: color;
     opacity: .2;
 }
